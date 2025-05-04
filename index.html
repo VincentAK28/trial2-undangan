@@ -5,47 +5,105 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Undangan Pernikahan</title>
   <style>
+    :root {
+      --primary-color: #8b5e3c;
+      --bg-color: #fefaf5;
+      --card-bg: #ffffff;
+      --font-main: 'Segoe UI', sans-serif;
+    }
+
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #fef6f0;
-      color: #4a2c2a;
-      text-align: center;
-      padding: 30px;
+      margin: 0;
+      padding: 0;
+      font-family: var(--font-main);
+      background-color: var(--bg-color);
+      color: var(--primary-color);
     }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
     .card {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      background-color: var(--card-bg);
       padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
       max-width: 600px;
-      margin: auto;
+      width: 100%;
+      text-align: center;
     }
+
     h1 {
-      font-size: 2em;
-      margin-bottom: 0.2em;
+      margin-bottom: 0;
     }
+
     h2 {
+      margin-top: 5px;
       font-weight: normal;
-      margin-top: 0;
     }
+
     .date {
-      font-size: 1.2em;
-      margin-top: 1em;
+      margin: 20px 0;
+      font-size: 1.1em;
+    }
+
+    a.button {
+      display: inline-block;
+      background-color: var(--primary-color);
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 8px;
+      margin-top: 20px;
+      transition: background 0.3s ease;
+    }
+
+    a.button:hover {
+      background-color: #6e4327;
+    }
+
+    /* 🎯 Responsiveness */
+    @media (max-width: 480px) {
+      .card {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 1.5em;
+      }
+
+      h2, .date {
+        font-size: 1em;
+      }
+
+      a.button {
+        padding: 8px 16px;
+        font-size: 0.9em;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h1>Undangan Pernikahan</h1>
-    <h2>Raka & Nisa</h2>
-    <p>Dengan sukacita, kami mengundang Anda untuk hadir dalam pernikahan kami</p>
-    <div class="date">
-      <p><strong>Tanggal:</strong> 12 Juni 2025</p>
-      <p><strong>Waktu:</strong> 10.00 WIB</p>
-      <p><strong>Tempat:</strong> Gedung Serbaguna Sakura, Bandung</p>
+  <div class="container">
+    <div class="card">
+      <h1>Undangan Pernikahan</h1>
+      <h2>Raka & Nisa</h2>
+      <p>Dengan penuh sukacita, kami mengundang Anda untuk hadir dalam hari bahagia kami.</p>
+      
+      <div class="date">
+        <p><strong>Tanggal:</strong> 12 Juni 2025</p>
+        <p><strong>Waktu:</strong> 10.00 WIB</p>
+        <p><strong>Tempat:</strong> Gedung Serbaguna Sakura, Bandung</p>
+      </div>
+
+      <a class="button" href="https://forms.gle/contohRSVP" target="_blank">Konfirmasi Kehadiran (RSVP)</a>
     </div>
-    <p>Mohon konfirmasi kehadiran melalui link RSVP berikut:</p>
-    <p><a href="https://forms.gle/contohRSVP" target="_blank">Form RSVP</a></p>
   </div>
 </body>
 </html>
+
